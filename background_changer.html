@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        h1 {
+            color: #333;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #007BFF;
+            color: white;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>This will change background color randomly when button clicked</h1>
+    <button id="changeBackground">Change Background</button>
+    <!--use rgba-->
+    <script>
+        document.getElementById('changeBackground').addEventListener('click', function() {
+            const randomColor = 'rgba(' + Math.floor(Math.random() * 256) + ',' +
+                                Math.floor(Math.random() * 256) + ',' +
+                                Math.floor(Math.random() * 256) + ', 0.5)';
+            document.body.style.backgroundColor = randomColor;
+        });
+    </script>
+    <p>Click the button to change the background color.</p> 
+
+
+</body>
+</html>
